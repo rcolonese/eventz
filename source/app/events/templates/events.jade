@@ -1,0 +1,11 @@
+ion-view(view-title="Eventz")
+    ion-content
+        header
+            h1 Eventos
+            p Selecione um evento para ver seus detalhes
+
+        div.list
+            a.item(collection-repeat="event in Events.events" href="#/app/events/{{::event.id}}")
+                h2 {{::event.name}}
+                span.item-note {{::event.start_date}}
+                p {{::event.place}}
